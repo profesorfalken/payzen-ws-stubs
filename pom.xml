@@ -1,0 +1,59 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.profesorfalken</groupId>
+	<artifactId>payzen-ws-stubs</artifactId>
+	<version>1.0.0-SNAPSHOT</version>
+	<name>Payzen WS v5 stubs</name>
+	<description>Generated stubs to use Payzen v5 Web Services</description>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<maven.compiler.source>1.5</maven.compiler.source>
+		<maven.compiler.target>1.5</maven.compiler.target>
+		<maven.javadoc.failOnError>false</maven.javadoc.failOnError>
+	</properties>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.jvnet.jax-ws-commons</groupId>
+				<artifactId>jaxws-maven-plugin</artifactId>
+				<version>2.3</version>
+				<configuration>
+					<encoding>UTF-8</encoding>
+					<verbose>true</verbose>
+				</configuration>
+				<executions>
+					<execution>
+						<phase>generate-sources</phase>
+						<goals>
+							<goal>wsimport</goal>
+						</goals>
+						<configuration>
+							<!-- Needed with JAXP 1.5 -->
+							<vmArgs>
+								<vmArg>-Djavax.xml.accessExternalSchema=all</vmArg>
+							</vmArgs>
+							<!-- Keep generated files -->
+							<keep>true</keep>
+							<encoding>UTF-8</encoding>
+							<extension>true</extension>
+							<sourceDestDir>
+								src/main/java
+							</sourceDestDir>
+							<destDir>
+								target/classes
+							</destDir>
+							<wsdlUrls>
+								<wsdlUrl>
+									https://secure.payzen.eu/vads-ws/v5?wsdl
+								</wsdlUrl>
+							</wsdlUrls>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+</project>
