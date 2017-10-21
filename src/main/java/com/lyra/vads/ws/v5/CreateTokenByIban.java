@@ -7,17 +7,18 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Classe Java pour cancelSubscription complex type.
+ * <p>Classe Java pour createTokenByIban complex type.
  * 
  * <p>Le fragment de schéma suivant indique le contenu attendu figurant dans cette classe.
  * 
  * <pre>
- * &lt;complexType name="cancelSubscription">
+ * &lt;complexType name="createTokenByIban">
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
  *         &lt;element name="commonRequest" type="{http://v5.ws.vads.lyra.com/}commonRequest" minOccurs="0"/>
- *         &lt;element name="queryRequest" type="{http://v5.ws.vads.lyra.com/}queryRequest" minOccurs="0"/>
+ *         &lt;element name="ibanRequest" type="{http://v5.ws.vads.lyra.com/}ibanRequest" minOccurs="0"/>
+ *         &lt;element name="customerRequest" type="{http://v5.ws.vads.lyra.com/}customerRequest" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -27,14 +28,16 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "cancelSubscription", propOrder = {
+@XmlType(name = "createTokenByIban", propOrder = {
     "commonRequest",
-    "queryRequest"
+    "ibanRequest",
+    "customerRequest"
 })
-public class CancelSubscription {
+public class CreateTokenByIban {
 
     protected CommonRequest commonRequest;
-    protected QueryRequest queryRequest;
+    protected IbanRequest ibanRequest;
+    protected CustomerRequest customerRequest;
 
     /**
      * Obtient la valeur de la propriété commonRequest.
@@ -61,27 +64,51 @@ public class CancelSubscription {
     }
 
     /**
-     * Obtient la valeur de la propriété queryRequest.
+     * Obtient la valeur de la propriété ibanRequest.
      * 
      * @return
      *     possible object is
-     *     {@link QueryRequest }
+     *     {@link IbanRequest }
      *     
      */
-    public QueryRequest getQueryRequest() {
-        return queryRequest;
+    public IbanRequest getIbanRequest() {
+        return ibanRequest;
     }
 
     /**
-     * Définit la valeur de la propriété queryRequest.
+     * Définit la valeur de la propriété ibanRequest.
      * 
      * @param value
      *     allowed object is
-     *     {@link QueryRequest }
+     *     {@link IbanRequest }
      *     
      */
-    public void setQueryRequest(QueryRequest value) {
-        this.queryRequest = value;
+    public void setIbanRequest(IbanRequest value) {
+        this.ibanRequest = value;
+    }
+
+    /**
+     * Obtient la valeur de la propriété customerRequest.
+     * 
+     * @return
+     *     possible object is
+     *     {@link CustomerRequest }
+     *     
+     */
+    public CustomerRequest getCustomerRequest() {
+        return customerRequest;
+    }
+
+    /**
+     * Définit la valeur de la propriété customerRequest.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link CustomerRequest }
+     *     
+     */
+    public void setCustomerRequest(CustomerRequest value) {
+        this.customerRequest = value;
     }
 
 }

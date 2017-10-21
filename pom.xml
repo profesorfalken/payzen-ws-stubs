@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.profesorfalken</groupId>
 	<artifactId>payzen-ws-stubs</artifactId>
-	<version>1.0.1-SNAPSHOT</version>
+	<version>1.0.2</version>
 	<name>Payzen WS v5 stubs</name>
 	<description>Generated stubs to use Payzen v5 Web Services</description>
 	<url>https://github.com/profesorfalken/payzen-ws-stubs</url>

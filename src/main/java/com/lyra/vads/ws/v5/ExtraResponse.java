@@ -7,9 +7,9 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for extraResponse complex type.
+ * <p>Classe Java pour extraResponse complex type.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>Le fragment de schéma suivant indique le contenu attendu figurant dans cette classe.
  * 
  * <pre>
  * &lt;complexType name="extraResponse">
@@ -18,6 +18,7 @@ import javax.xml.bind.annotation.XmlType;
  *       &lt;sequence>
  *         &lt;element name="paymentOptionCode" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="paymentOptionOccNumber" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+ *         &lt;element name="boletoPdfUrl" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -29,15 +30,17 @@ import javax.xml.bind.annotation.XmlType;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "extraResponse", propOrder = {
     "paymentOptionCode",
-    "paymentOptionOccNumber"
+    "paymentOptionOccNumber",
+    "boletoPdfUrl"
 })
 public class ExtraResponse {
 
     protected String paymentOptionCode;
     protected Integer paymentOptionOccNumber;
+    protected String boletoPdfUrl;
 
     /**
-     * Gets the value of the paymentOptionCode property.
+     * Obtient la valeur de la propriété paymentOptionCode.
      * 
      * @return
      *     possible object is
@@ -49,7 +52,7 @@ public class ExtraResponse {
     }
 
     /**
-     * Sets the value of the paymentOptionCode property.
+     * Définit la valeur de la propriété paymentOptionCode.
      * 
      * @param value
      *     allowed object is
@@ -61,7 +64,7 @@ public class ExtraResponse {
     }
 
     /**
-     * Gets the value of the paymentOptionOccNumber property.
+     * Obtient la valeur de la propriété paymentOptionOccNumber.
      * 
      * @return
      *     possible object is
@@ -73,7 +76,7 @@ public class ExtraResponse {
     }
 
     /**
-     * Sets the value of the paymentOptionOccNumber property.
+     * Définit la valeur de la propriété paymentOptionOccNumber.
      * 
      * @param value
      *     allowed object is
@@ -82,6 +85,30 @@ public class ExtraResponse {
      */
     public void setPaymentOptionOccNumber(Integer value) {
         this.paymentOptionOccNumber = value;
+    }
+
+    /**
+     * Obtient la valeur de la propriété boletoPdfUrl.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getBoletoPdfUrl() {
+        return boletoPdfUrl;
+    }
+
+    /**
+     * Définit la valeur de la propriété boletoPdfUrl.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setBoletoPdfUrl(String value) {
+        this.boletoPdfUrl = value;
     }
 
 }

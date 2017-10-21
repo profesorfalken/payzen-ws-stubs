@@ -7,16 +7,16 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Classe Java pour cancelSubscriptionResponse complex type.
+ * <p>Classe Java pour cancelCapturedPaymentResponse complex type.
  * 
  * <p>Le fragment de schéma suivant indique le contenu attendu figurant dans cette classe.
  * 
  * <pre>
- * &lt;complexType name="cancelSubscriptionResponse">
+ * &lt;complexType name="cancelCapturedPaymentResponse">
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="cancelSubscriptionResult" minOccurs="0">
+ *         &lt;element name="cancelCapturedPaymentResult" minOccurs="0">
  *           &lt;complexType>
  *             &lt;complexContent>
  *               &lt;extension base="{http://v5.ws.vads.lyra.com/}wsResponse">
@@ -36,35 +36,35 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "cancelSubscriptionResponse", propOrder = {
-    "cancelSubscriptionResult"
+@XmlType(name = "cancelCapturedPaymentResponse", propOrder = {
+    "cancelCapturedPaymentResult"
 })
-public class CancelSubscriptionResponse {
+public class CancelCapturedPaymentResponse {
 
-    protected CancelSubscriptionResponse.CancelSubscriptionResult cancelSubscriptionResult;
+    protected CancelCapturedPaymentResponse.CancelCapturedPaymentResult cancelCapturedPaymentResult;
 
     /**
-     * Obtient la valeur de la propriété cancelSubscriptionResult.
+     * Obtient la valeur de la propriété cancelCapturedPaymentResult.
      * 
      * @return
      *     possible object is
-     *     {@link CancelSubscriptionResponse.CancelSubscriptionResult }
+     *     {@link CancelCapturedPaymentResponse.CancelCapturedPaymentResult }
      *     
      */
-    public CancelSubscriptionResponse.CancelSubscriptionResult getCancelSubscriptionResult() {
-        return cancelSubscriptionResult;
+    public CancelCapturedPaymentResponse.CancelCapturedPaymentResult getCancelCapturedPaymentResult() {
+        return cancelCapturedPaymentResult;
     }
 
     /**
-     * Définit la valeur de la propriété cancelSubscriptionResult.
+     * Définit la valeur de la propriété cancelCapturedPaymentResult.
      * 
      * @param value
      *     allowed object is
-     *     {@link CancelSubscriptionResponse.CancelSubscriptionResult }
+     *     {@link CancelCapturedPaymentResponse.CancelCapturedPaymentResult }
      *     
      */
-    public void setCancelSubscriptionResult(CancelSubscriptionResponse.CancelSubscriptionResult value) {
-        this.cancelSubscriptionResult = value;
+    public void setCancelCapturedPaymentResult(CancelCapturedPaymentResponse.CancelCapturedPaymentResult value) {
+        this.cancelCapturedPaymentResult = value;
     }
 
 
@@ -91,7 +91,7 @@ public class CancelSubscriptionResponse {
     @XmlType(name = "", propOrder = {
         "commonResponse"
     })
-    public static class CancelSubscriptionResult
+    public static class CancelCapturedPaymentResult
         extends WsResponse
     {
 

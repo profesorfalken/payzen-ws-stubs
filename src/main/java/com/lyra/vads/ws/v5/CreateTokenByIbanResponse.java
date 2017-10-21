@@ -7,16 +7,16 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Classe Java pour createPaymentResponse complex type.
+ * <p>Classe Java pour createTokenByIbanResponse complex type.
  * 
  * <p>Le fragment de schéma suivant indique le contenu attendu figurant dans cette classe.
  * 
  * <pre>
- * &lt;complexType name="createPaymentResponse">
+ * &lt;complexType name="createTokenByIbanResponse">
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="createPaymentResult" minOccurs="0">
+ *         &lt;element name="createTokenByIbanResult" minOccurs="0">
  *           &lt;complexType>
  *             &lt;complexContent>
  *               &lt;extension base="{http://v5.ws.vads.lyra.com/}wsResponse">
@@ -48,35 +48,35 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "createPaymentResponse", propOrder = {
-    "createPaymentResult"
+@XmlType(name = "createTokenByIbanResponse", propOrder = {
+    "createTokenByIbanResult"
 })
-public class CreatePaymentResponse {
+public class CreateTokenByIbanResponse {
 
-    protected CreatePaymentResponse.CreatePaymentResult createPaymentResult;
+    protected CreateTokenByIbanResponse.CreateTokenByIbanResult createTokenByIbanResult;
 
     /**
-     * Obtient la valeur de la propriété createPaymentResult.
+     * Obtient la valeur de la propriété createTokenByIbanResult.
      * 
      * @return
      *     possible object is
-     *     {@link CreatePaymentResponse.CreatePaymentResult }
+     *     {@link CreateTokenByIbanResponse.CreateTokenByIbanResult }
      *     
      */
-    public CreatePaymentResponse.CreatePaymentResult getCreatePaymentResult() {
-        return createPaymentResult;
+    public CreateTokenByIbanResponse.CreateTokenByIbanResult getCreateTokenByIbanResult() {
+        return createTokenByIbanResult;
     }
 
     /**
-     * Définit la valeur de la propriété createPaymentResult.
+     * Définit la valeur de la propriété createTokenByIbanResult.
      * 
      * @param value
      *     allowed object is
-     *     {@link CreatePaymentResponse.CreatePaymentResult }
+     *     {@link CreateTokenByIbanResponse.CreateTokenByIbanResult }
      *     
      */
-    public void setCreatePaymentResult(CreatePaymentResponse.CreatePaymentResult value) {
-        this.createPaymentResult = value;
+    public void setCreateTokenByIbanResult(CreateTokenByIbanResponse.CreateTokenByIbanResult value) {
+        this.createTokenByIbanResult = value;
     }
 
 
@@ -127,7 +127,7 @@ public class CreatePaymentResponse {
         "fraudManagementResponse",
         "shoppingCartResponse"
     })
-    public static class CreatePaymentResult
+    public static class CreateTokenByIbanResult
         extends WsResponse
     {
 

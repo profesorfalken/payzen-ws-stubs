@@ -8,9 +8,9 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for wsResponse complex type.
+ * <p>Classe Java pour wsResponse complex type.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>Le fragment de schéma suivant indique le contenu attendu figurant dans cette classe.
  * 
  * <pre>
  * &lt;complexType name="wsResponse">
@@ -31,28 +31,30 @@ import javax.xml.bind.annotation.XmlType;
     "requestId"
 })
 @XmlSeeAlso({
-    com.lyra.vads.ws.v5.CancelTokenResponse.CancelTokenResult.class,
-    com.lyra.vads.ws.v5.UpdatePaymentResponse.UpdatePaymentResult.class,
-    com.lyra.vads.ws.v5.FindPaymentsResponse.FindPaymentsResult.class,
-    com.lyra.vads.ws.v5.RefundPaymentResponse.RefundPaymentResult.class,
     com.lyra.vads.ws.v5.CreatePaymentResponse.CreatePaymentResult.class,
-    com.lyra.vads.ws.v5.CreateTokenFromTransactionResponse.CreateTokenFromTransactionResult.class,
     com.lyra.vads.ws.v5.UpdatePaymentDetailsResponse.UpdatePaymentDetailsResult.class,
-    com.lyra.vads.ws.v5.CapturePaymentResponse.CapturePaymentResult.class,
     com.lyra.vads.ws.v5.CancelSubscriptionResponse.CancelSubscriptionResult.class,
-    com.lyra.vads.ws.v5.GetTokenDetailsResponse.GetTokenDetailsResult.class,
     com.lyra.vads.ws.v5.GetPaymentUuidResponse.LegacyTransactionKeyResult.class,
-    com.lyra.vads.ws.v5.UpdateTokenResponse.UpdateTokenResult.class,
     com.lyra.vads.ws.v5.VerifyThreeDSEnrollmentResponse.VerifyThreeDSEnrollmentResult.class,
     com.lyra.vads.ws.v5.CreateTokenResponse.CreateTokenResult.class,
     com.lyra.vads.ws.v5.ValidatePaymentResponse.ValidatePaymentResult.class,
     com.lyra.vads.ws.v5.GetSubscriptionDetailsResponse.GetSubscriptionDetailsResult.class,
     com.lyra.vads.ws.v5.ReactivateTokenResponse.ReactivateTokenResult.class,
-    com.lyra.vads.ws.v5.CreateSubscriptionResponse.CreateSubscriptionResult.class,
     com.lyra.vads.ws.v5.GetPaymentDetailsResponse.GetPaymentDetailsResult.class,
     com.lyra.vads.ws.v5.DuplicatePaymentResponse.DuplicatePaymentResult.class,
     com.lyra.vads.ws.v5.UpdateSubscriptionResponse.UpdateSubscriptionResult.class,
+    com.lyra.vads.ws.v5.CancelCapturedPaymentResponse.CancelCapturedPaymentResult.class,
     com.lyra.vads.ws.v5.CancelPaymentResponse.CancelPaymentResult.class,
+    com.lyra.vads.ws.v5.CancelTokenResponse.CancelTokenResult.class,
+    com.lyra.vads.ws.v5.UpdatePaymentResponse.UpdatePaymentResult.class,
+    com.lyra.vads.ws.v5.FindPaymentsResponse.FindPaymentsResult.class,
+    com.lyra.vads.ws.v5.RefundPaymentResponse.RefundPaymentResult.class,
+    com.lyra.vads.ws.v5.CreateTokenFromTransactionResponse.CreateTokenFromTransactionResult.class,
+    com.lyra.vads.ws.v5.CapturePaymentResponse.CapturePaymentResult.class,
+    com.lyra.vads.ws.v5.GetTokenDetailsResponse.GetTokenDetailsResult.class,
+    com.lyra.vads.ws.v5.UpdateTokenResponse.UpdateTokenResult.class,
+    com.lyra.vads.ws.v5.CreateSubscriptionResponse.CreateSubscriptionResult.class,
+    com.lyra.vads.ws.v5.CreateTokenByIbanResponse.CreateTokenByIbanResult.class,
     com.lyra.vads.ws.v5.CheckThreeDSAuthenticationResponse.CheckThreeDSAuthenticationResult.class
 })
 public class WsResponse {
@@ -60,7 +62,7 @@ public class WsResponse {
     protected String requestId;
 
     /**
-     * Gets the value of the requestId property.
+     * Obtient la valeur de la propriété requestId.
      * 
      * @return
      *     possible object is
@@ -72,7 +74,7 @@ public class WsResponse {
     }
 
     /**
-     * Sets the value of the requestId property.
+     * Définit la valeur de la propriété requestId.
      * 
      * @param value
      *     allowed object is

@@ -7,9 +7,9 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for billingDetailsRequest complex type.
+ * <p>Classe Java pour billingDetailsRequest complex type.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>Le fragment de schéma suivant indique le contenu attendu figurant dans cette classe.
  * 
  * <pre>
  * &lt;complexType name="billingDetailsRequest">
@@ -88,7 +88,7 @@ public class BillingDetailsRequest {
     protected String identityCode;
 
     /**
-     * Gets the value of the reference property.
+     * Obtient la valeur de la propriété reference.
      * 
      * @return
      *     possible object is
@@ -100,7 +100,7 @@ public class BillingDetailsRequest {
     }
 
     /**
-     * Sets the value of the reference property.
+     * Définit la valeur de la propriété reference.
      * 
      * @param value
      *     allowed object is
@@ -112,7 +112,7 @@ public class BillingDetailsRequest {
     }
 
     /**
-     * Gets the value of the title property.
+     * Obtient la valeur de la propriété title.
      * 
      * @return
      *     possible object is
@@ -124,7 +124,7 @@ public class BillingDetailsRequest {
     }
 
     /**
-     * Sets the value of the title property.
+     * Définit la valeur de la propriété title.
      * 
      * @param value
      *     allowed object is
@@ -136,7 +136,7 @@ public class BillingDetailsRequest {
     }
 
     /**
-     * Gets the value of the type property.
+     * Obtient la valeur de la propriété type.
      * 
      * @return
      *     possible object is
@@ -148,7 +148,7 @@ public class BillingDetailsRequest {
     }
 
     /**
-     * Sets the value of the type property.
+     * Définit la valeur de la propriété type.
      * 
      * @param value
      *     allowed object is
@@ -160,7 +160,7 @@ public class BillingDetailsRequest {
     }
 
     /**
-     * Gets the value of the firstName property.
+     * Obtient la valeur de la propriété firstName.
      * 
      * @return
      *     possible object is
@@ -172,7 +172,7 @@ public class BillingDetailsRequest {
     }
 
     /**
-     * Sets the value of the firstName property.
+     * Définit la valeur de la propriété firstName.
      * 
      * @param value
      *     allowed object is
@@ -184,7 +184,7 @@ public class BillingDetailsRequest {
     }
 
     /**
-     * Gets the value of the lastName property.
+     * Obtient la valeur de la propriété lastName.
      * 
      * @return
      *     possible object is
@@ -196,7 +196,7 @@ public class BillingDetailsRequest {
     }
 
     /**
-     * Sets the value of the lastName property.
+     * Définit la valeur de la propriété lastName.
      * 
      * @param value
      *     allowed object is
@@ -208,7 +208,7 @@ public class BillingDetailsRequest {
     }
 
     /**
-     * Gets the value of the phoneNumber property.
+     * Obtient la valeur de la propriété phoneNumber.
      * 
      * @return
      *     possible object is
@@ -220,7 +220,7 @@ public class BillingDetailsRequest {
     }
 
     /**
-     * Sets the value of the phoneNumber property.
+     * Définit la valeur de la propriété phoneNumber.
      * 
      * @param value
      *     allowed object is
@@ -232,7 +232,7 @@ public class BillingDetailsRequest {
     }
 
     /**
-     * Gets the value of the email property.
+     * Obtient la valeur de la propriété email.
      * 
      * @return
      *     possible object is
@@ -244,7 +244,7 @@ public class BillingDetailsRequest {
     }
 
     /**
-     * Sets the value of the email property.
+     * Définit la valeur de la propriété email.
      * 
      * @param value
      *     allowed object is
@@ -256,7 +256,7 @@ public class BillingDetailsRequest {
     }
 
     /**
-     * Gets the value of the streetNumber property.
+     * Obtient la valeur de la propriété streetNumber.
      * 
      * @return
      *     possible object is
@@ -268,7 +268,7 @@ public class BillingDetailsRequest {
     }
 
     /**
-     * Sets the value of the streetNumber property.
+     * Définit la valeur de la propriété streetNumber.
      * 
      * @param value
      *     allowed object is
@@ -280,7 +280,7 @@ public class BillingDetailsRequest {
     }
 
     /**
-     * Gets the value of the address property.
+     * Obtient la valeur de la propriété address.
      * 
      * @return
      *     possible object is
@@ -292,7 +292,7 @@ public class BillingDetailsRequest {
     }
 
     /**
-     * Sets the value of the address property.
+     * Définit la valeur de la propriété address.
      * 
      * @param value
      *     allowed object is
@@ -304,7 +304,7 @@ public class BillingDetailsRequest {
     }
 
     /**
-     * Gets the value of the address2 property.
+     * Obtient la valeur de la propriété address2.
      * 
      * @return
      *     possible object is
@@ -316,7 +316,7 @@ public class BillingDetailsRequest {
     }
 
     /**
-     * Sets the value of the address2 property.
+     * Définit la valeur de la propriété address2.
      * 
      * @param value
      *     allowed object is
@@ -328,7 +328,7 @@ public class BillingDetailsRequest {
     }
 
     /**
-     * Gets the value of the district property.
+     * Obtient la valeur de la propriété district.
      * 
      * @return
      *     possible object is
@@ -340,7 +340,7 @@ public class BillingDetailsRequest {
     }
 
     /**
-     * Sets the value of the district property.
+     * Définit la valeur de la propriété district.
      * 
      * @param value
      *     allowed object is
@@ -352,7 +352,7 @@ public class BillingDetailsRequest {
     }
 
     /**
-     * Gets the value of the zipCode property.
+     * Obtient la valeur de la propriété zipCode.
      * 
      * @return
      *     possible object is
@@ -364,7 +364,7 @@ public class BillingDetailsRequest {
     }
 
     /**
-     * Sets the value of the zipCode property.
+     * Définit la valeur de la propriété zipCode.
      * 
      * @param value
      *     allowed object is
@@ -376,7 +376,7 @@ public class BillingDetailsRequest {
     }
 
     /**
-     * Gets the value of the city property.
+     * Obtient la valeur de la propriété city.
      * 
      * @return
      *     possible object is
@@ -388,7 +388,7 @@ public class BillingDetailsRequest {
     }
 
     /**
-     * Sets the value of the city property.
+     * Définit la valeur de la propriété city.
      * 
      * @param value
      *     allowed object is
@@ -400,7 +400,7 @@ public class BillingDetailsRequest {
     }
 
     /**
-     * Gets the value of the state property.
+     * Obtient la valeur de la propriété state.
      * 
      * @return
      *     possible object is
@@ -412,7 +412,7 @@ public class BillingDetailsRequest {
     }
 
     /**
-     * Sets the value of the state property.
+     * Définit la valeur de la propriété state.
      * 
      * @param value
      *     allowed object is
@@ -424,7 +424,7 @@ public class BillingDetailsRequest {
     }
 
     /**
-     * Gets the value of the country property.
+     * Obtient la valeur de la propriété country.
      * 
      * @return
      *     possible object is
@@ -436,7 +436,7 @@ public class BillingDetailsRequest {
     }
 
     /**
-     * Sets the value of the country property.
+     * Définit la valeur de la propriété country.
      * 
      * @param value
      *     allowed object is
@@ -448,7 +448,7 @@ public class BillingDetailsRequest {
     }
 
     /**
-     * Gets the value of the language property.
+     * Obtient la valeur de la propriété language.
      * 
      * @return
      *     possible object is
@@ -460,7 +460,7 @@ public class BillingDetailsRequest {
     }
 
     /**
-     * Sets the value of the language property.
+     * Définit la valeur de la propriété language.
      * 
      * @param value
      *     allowed object is
@@ -472,7 +472,7 @@ public class BillingDetailsRequest {
     }
 
     /**
-     * Gets the value of the cellPhoneNumber property.
+     * Obtient la valeur de la propriété cellPhoneNumber.
      * 
      * @return
      *     possible object is
@@ -484,7 +484,7 @@ public class BillingDetailsRequest {
     }
 
     /**
-     * Sets the value of the cellPhoneNumber property.
+     * Définit la valeur de la propriété cellPhoneNumber.
      * 
      * @param value
      *     allowed object is
@@ -496,7 +496,7 @@ public class BillingDetailsRequest {
     }
 
     /**
-     * Gets the value of the legalName property.
+     * Obtient la valeur de la propriété legalName.
      * 
      * @return
      *     possible object is
@@ -508,7 +508,7 @@ public class BillingDetailsRequest {
     }
 
     /**
-     * Sets the value of the legalName property.
+     * Définit la valeur de la propriété legalName.
      * 
      * @param value
      *     allowed object is
@@ -520,7 +520,7 @@ public class BillingDetailsRequest {
     }
 
     /**
-     * Gets the value of the identityCode property.
+     * Obtient la valeur de la propriété identityCode.
      * 
      * @return
      *     possible object is
@@ -532,7 +532,7 @@ public class BillingDetailsRequest {
     }
 
     /**
-     * Sets the value of the identityCode property.
+     * Définit la valeur de la propriété identityCode.
      * 
      * @param value
      *     allowed object is

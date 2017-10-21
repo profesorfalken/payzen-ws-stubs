@@ -7,9 +7,9 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for getPaymentDetails complex type.
+ * <p>Classe Java pour getPaymentDetails complex type.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>Le fragment de schéma suivant indique le contenu attendu figurant dans cette classe.
  * 
  * <pre>
  * &lt;complexType name="getPaymentDetails">
@@ -17,6 +17,7 @@ import javax.xml.bind.annotation.XmlType;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
  *         &lt;element name="queryRequest" type="{http://v5.ws.vads.lyra.com/}queryRequest" minOccurs="0"/>
+ *         &lt;element name="extendedResponseRequest" type="{http://v5.ws.vads.lyra.com/}extendedResponseRequest" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -27,14 +28,16 @@ import javax.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "getPaymentDetails", propOrder = {
-    "queryRequest"
+    "queryRequest",
+    "extendedResponseRequest"
 })
 public class GetPaymentDetails {
 
     protected QueryRequest queryRequest;
+    protected ExtendedResponseRequest extendedResponseRequest;
 
     /**
-     * Gets the value of the queryRequest property.
+     * Obtient la valeur de la propriété queryRequest.
      * 
      * @return
      *     possible object is
@@ -46,7 +49,7 @@ public class GetPaymentDetails {
     }
 
     /**
-     * Sets the value of the queryRequest property.
+     * Définit la valeur de la propriété queryRequest.
      * 
      * @param value
      *     allowed object is
@@ -55,6 +58,30 @@ public class GetPaymentDetails {
      */
     public void setQueryRequest(QueryRequest value) {
         this.queryRequest = value;
+    }
+
+    /**
+     * Obtient la valeur de la propriété extendedResponseRequest.
+     * 
+     * @return
+     *     possible object is
+     *     {@link ExtendedResponseRequest }
+     *     
+     */
+    public ExtendedResponseRequest getExtendedResponseRequest() {
+        return extendedResponseRequest;
+    }
+
+    /**
+     * Définit la valeur de la propriété extendedResponseRequest.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link ExtendedResponseRequest }
+     *     
+     */
+    public void setExtendedResponseRequest(ExtendedResponseRequest value) {
+        this.extendedResponseRequest = value;
     }
 
 }

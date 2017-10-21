@@ -9,9 +9,9 @@ import javax.xml.datatype.XMLGregorianCalendar;
 
 
 /**
- * <p>Java class for paymentRequest complex type.
+ * <p>Classe Java pour paymentRequest complex type.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>Le fragment de schéma suivant indique le contenu attendu figurant dans cette classe.
  * 
  * <pre>
  * &lt;complexType name="paymentRequest">
@@ -19,11 +19,15 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
  *         &lt;element name="transactionId" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="retryUuid" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="amount" type="{http://www.w3.org/2001/XMLSchema}long" minOccurs="0"/>
  *         &lt;element name="currency" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
  *         &lt;element name="expectedCaptureDate" type="{http://www.w3.org/2001/XMLSchema}dateTime" minOccurs="0"/>
  *         &lt;element name="manualValidation" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
  *         &lt;element name="paymentOptionCode" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="acquirerTransientData" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="firstInstallmentDelay" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+ *         &lt;element name="overridePaymentCinematic" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -35,24 +39,32 @@ import javax.xml.datatype.XMLGregorianCalendar;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "paymentRequest", propOrder = {
     "transactionId",
+    "retryUuid",
     "amount",
     "currency",
     "expectedCaptureDate",
     "manualValidation",
-    "paymentOptionCode"
+    "paymentOptionCode",
+    "acquirerTransientData",
+    "firstInstallmentDelay",
+    "overridePaymentCinematic"
 })
 public class PaymentRequest {
 
     protected String transactionId;
+    protected String retryUuid;
     protected Long amount;
     protected Integer currency;
     @XmlSchemaType(name = "dateTime")
     protected XMLGregorianCalendar expectedCaptureDate;
     protected Integer manualValidation;
     protected String paymentOptionCode;
+    protected String acquirerTransientData;
+    protected Integer firstInstallmentDelay;
+    protected String overridePaymentCinematic;
 
     /**
-     * Gets the value of the transactionId property.
+     * Obtient la valeur de la propriété transactionId.
      * 
      * @return
      *     possible object is
@@ -64,7 +76,7 @@ public class PaymentRequest {
     }
 
     /**
-     * Sets the value of the transactionId property.
+     * Définit la valeur de la propriété transactionId.
      * 
      * @param value
      *     allowed object is
@@ -76,7 +88,31 @@ public class PaymentRequest {
     }
 
     /**
-     * Gets the value of the amount property.
+     * Obtient la valeur de la propriété retryUuid.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getRetryUuid() {
+        return retryUuid;
+    }
+
+    /**
+     * Définit la valeur de la propriété retryUuid.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setRetryUuid(String value) {
+        this.retryUuid = value;
+    }
+
+    /**
+     * Obtient la valeur de la propriété amount.
      * 
      * @return
      *     possible object is
@@ -88,7 +124,7 @@ public class PaymentRequest {
     }
 
     /**
-     * Sets the value of the amount property.
+     * Définit la valeur de la propriété amount.
      * 
      * @param value
      *     allowed object is
@@ -100,7 +136,7 @@ public class PaymentRequest {
     }
 
     /**
-     * Gets the value of the currency property.
+     * Obtient la valeur de la propriété currency.
      * 
      * @return
      *     possible object is
@@ -112,7 +148,7 @@ public class PaymentRequest {
     }
 
     /**
-     * Sets the value of the currency property.
+     * Définit la valeur de la propriété currency.
      * 
      * @param value
      *     allowed object is
@@ -124,7 +160,7 @@ public class PaymentRequest {
     }
 
     /**
-     * Gets the value of the expectedCaptureDate property.
+     * Obtient la valeur de la propriété expectedCaptureDate.
      * 
      * @return
      *     possible object is
@@ -136,7 +172,7 @@ public class PaymentRequest {
     }
 
     /**
-     * Sets the value of the expectedCaptureDate property.
+     * Définit la valeur de la propriété expectedCaptureDate.
      * 
      * @param value
      *     allowed object is
@@ -148,7 +184,7 @@ public class PaymentRequest {
     }
 
     /**
-     * Gets the value of the manualValidation property.
+     * Obtient la valeur de la propriété manualValidation.
      * 
      * @return
      *     possible object is
@@ -160,7 +196,7 @@ public class PaymentRequest {
     }
 
     /**
-     * Sets the value of the manualValidation property.
+     * Définit la valeur de la propriété manualValidation.
      * 
      * @param value
      *     allowed object is
@@ -172,7 +208,7 @@ public class PaymentRequest {
     }
 
     /**
-     * Gets the value of the paymentOptionCode property.
+     * Obtient la valeur de la propriété paymentOptionCode.
      * 
      * @return
      *     possible object is
@@ -184,7 +220,7 @@ public class PaymentRequest {
     }
 
     /**
-     * Sets the value of the paymentOptionCode property.
+     * Définit la valeur de la propriété paymentOptionCode.
      * 
      * @param value
      *     allowed object is
@@ -193,6 +229,78 @@ public class PaymentRequest {
      */
     public void setPaymentOptionCode(String value) {
         this.paymentOptionCode = value;
+    }
+
+    /**
+     * Obtient la valeur de la propriété acquirerTransientData.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getAcquirerTransientData() {
+        return acquirerTransientData;
+    }
+
+    /**
+     * Définit la valeur de la propriété acquirerTransientData.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setAcquirerTransientData(String value) {
+        this.acquirerTransientData = value;
+    }
+
+    /**
+     * Obtient la valeur de la propriété firstInstallmentDelay.
+     * 
+     * @return
+     *     possible object is
+     *     {@link Integer }
+     *     
+     */
+    public Integer getFirstInstallmentDelay() {
+        return firstInstallmentDelay;
+    }
+
+    /**
+     * Définit la valeur de la propriété firstInstallmentDelay.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Integer }
+     *     
+     */
+    public void setFirstInstallmentDelay(Integer value) {
+        this.firstInstallmentDelay = value;
+    }
+
+    /**
+     * Obtient la valeur de la propriété overridePaymentCinematic.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getOverridePaymentCinematic() {
+        return overridePaymentCinematic;
+    }
+
+    /**
+     * Définit la valeur de la propriété overridePaymentCinematic.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setOverridePaymentCinematic(String value) {
+        this.overridePaymentCinematic = value;
     }
 
 }

@@ -7,9 +7,9 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for updatePaymentDetails complex type.
+ * <p>Classe Java pour updatePaymentDetails complex type.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>Le fragment de schéma suivant indique le contenu attendu figurant dans cette classe.
  * 
  * <pre>
  * &lt;complexType name="updatePaymentDetails">
@@ -37,7 +37,7 @@ public class UpdatePaymentDetails {
     protected ShoppingCartRequest shoppingCartRequest;
 
     /**
-     * Gets the value of the queryRequest property.
+     * Obtient la valeur de la propriété queryRequest.
      * 
      * @return
      *     possible object is
@@ -49,7 +49,7 @@ public class UpdatePaymentDetails {
     }
 
     /**
-     * Sets the value of the queryRequest property.
+     * Définit la valeur de la propriété queryRequest.
      * 
      * @param value
      *     allowed object is
@@ -61,7 +61,7 @@ public class UpdatePaymentDetails {
     }
 
     /**
-     * Gets the value of the shoppingCartRequest property.
+     * Obtient la valeur de la propriété shoppingCartRequest.
      * 
      * @return
      *     possible object is
@@ -73,7 +73,7 @@ public class UpdatePaymentDetails {
     }
 
     /**
-     * Sets the value of the shoppingCartRequest property.
+     * Définit la valeur de la propriété shoppingCartRequest.
      * 
      * @param value
      *     allowed object is

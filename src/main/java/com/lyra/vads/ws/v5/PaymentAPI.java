@@ -26,20 +26,17 @@ public interface PaymentAPI {
     /**
      * 
      * @param commonRequest
-     * @param paymentRequest
      * @param queryRequest
      * @return
-     *     returns com.lyra.vads.ws.v5.RefundPaymentResponse.RefundPaymentResult
+     *     returns com.lyra.vads.ws.v5.CancelCapturedPaymentResponse.CancelCapturedPaymentResult
      */
     @WebMethod
-    @WebResult(name = "refundPaymentResult", targetNamespace = "")
-    @RequestWrapper(localName = "refundPayment", targetNamespace = "http://v5.ws.vads.lyra.com/", className = "com.lyra.vads.ws.v5.RefundPayment")
-    @ResponseWrapper(localName = "refundPaymentResponse", targetNamespace = "http://v5.ws.vads.lyra.com/", className = "com.lyra.vads.ws.v5.RefundPaymentResponse")
-    public com.lyra.vads.ws.v5.RefundPaymentResponse.RefundPaymentResult refundPayment(
+    @WebResult(name = "cancelCapturedPaymentResult", targetNamespace = "")
+    @RequestWrapper(localName = "cancelCapturedPayment", targetNamespace = "http://v5.ws.vads.lyra.com/", className = "com.lyra.vads.ws.v5.CancelCapturedPayment")
+    @ResponseWrapper(localName = "cancelCapturedPaymentResponse", targetNamespace = "http://v5.ws.vads.lyra.com/", className = "com.lyra.vads.ws.v5.CancelCapturedPaymentResponse")
+    public com.lyra.vads.ws.v5.CancelCapturedPaymentResponse.CancelCapturedPaymentResult cancelCapturedPayment(
         @WebParam(name = "commonRequest", targetNamespace = "")
         CommonRequest commonRequest,
-        @WebParam(name = "paymentRequest", targetNamespace = "")
-        PaymentRequest paymentRequest,
         @WebParam(name = "queryRequest", targetNamespace = "")
         QueryRequest queryRequest);
 
@@ -60,19 +57,22 @@ public interface PaymentAPI {
     /**
      * 
      * @param commonRequest
-     * @param queryRequest
+     * @param ibanRequest
+     * @param customerRequest
      * @return
-     *     returns com.lyra.vads.ws.v5.CreateTokenFromTransactionResponse.CreateTokenFromTransactionResult
+     *     returns com.lyra.vads.ws.v5.CreateTokenByIbanResponse.CreateTokenByIbanResult
      */
     @WebMethod
-    @WebResult(name = "createTokenFromTransactionResult", targetNamespace = "")
-    @RequestWrapper(localName = "createTokenFromTransaction", targetNamespace = "http://v5.ws.vads.lyra.com/", className = "com.lyra.vads.ws.v5.CreateTokenFromTransaction")
-    @ResponseWrapper(localName = "createTokenFromTransactionResponse", targetNamespace = "http://v5.ws.vads.lyra.com/", className = "com.lyra.vads.ws.v5.CreateTokenFromTransactionResponse")
-    public com.lyra.vads.ws.v5.CreateTokenFromTransactionResponse.CreateTokenFromTransactionResult createTokenFromTransaction(
+    @WebResult(name = "createTokenByIbanResult", targetNamespace = "")
+    @RequestWrapper(localName = "createTokenByIban", targetNamespace = "http://v5.ws.vads.lyra.com/", className = "com.lyra.vads.ws.v5.CreateTokenByIban")
+    @ResponseWrapper(localName = "createTokenByIbanResponse", targetNamespace = "http://v5.ws.vads.lyra.com/", className = "com.lyra.vads.ws.v5.CreateTokenByIbanResponse")
+    public com.lyra.vads.ws.v5.CreateTokenByIbanResponse.CreateTokenByIbanResult createTokenByIban(
         @WebParam(name = "commonRequest", targetNamespace = "")
         CommonRequest commonRequest,
-        @WebParam(name = "queryRequest", targetNamespace = "")
-        QueryRequest queryRequest);
+        @WebParam(name = "ibanRequest", targetNamespace = "")
+        IbanRequest ibanRequest,
+        @WebParam(name = "customerRequest", targetNamespace = "")
+        CustomerRequest customerRequest);
 
     /**
      * 
@@ -108,6 +108,174 @@ public interface PaymentAPI {
         PaymentRequest paymentRequest,
         @WebParam(name = "orderRequest", targetNamespace = "")
         OrderRequest orderRequest,
+        @WebParam(name = "queryRequest", targetNamespace = "")
+        QueryRequest queryRequest);
+
+    /**
+     * 
+     * @param commonRequest
+     * @param queryRequest
+     * @return
+     *     returns com.lyra.vads.ws.v5.CancelPaymentResponse.CancelPaymentResult
+     */
+    @WebMethod
+    @WebResult(name = "cancelPaymentResult", targetNamespace = "")
+    @RequestWrapper(localName = "cancelPayment", targetNamespace = "http://v5.ws.vads.lyra.com/", className = "com.lyra.vads.ws.v5.CancelPayment")
+    @ResponseWrapper(localName = "cancelPaymentResponse", targetNamespace = "http://v5.ws.vads.lyra.com/", className = "com.lyra.vads.ws.v5.CancelPaymentResponse")
+    public com.lyra.vads.ws.v5.CancelPaymentResponse.CancelPaymentResult cancelPayment(
+        @WebParam(name = "commonRequest", targetNamespace = "")
+        CommonRequest commonRequest,
+        @WebParam(name = "queryRequest", targetNamespace = "")
+        QueryRequest queryRequest);
+
+    /**
+     * 
+     * @param threeDSRequest
+     * @param commonRequest
+     * @return
+     *     returns com.lyra.vads.ws.v5.CheckThreeDSAuthenticationResponse.CheckThreeDSAuthenticationResult
+     */
+    @WebMethod
+    @WebResult(name = "checkThreeDSAuthenticationResult", targetNamespace = "")
+    @RequestWrapper(localName = "checkThreeDSAuthentication", targetNamespace = "http://v5.ws.vads.lyra.com/", className = "com.lyra.vads.ws.v5.CheckThreeDSAuthentication")
+    @ResponseWrapper(localName = "checkThreeDSAuthenticationResponse", targetNamespace = "http://v5.ws.vads.lyra.com/", className = "com.lyra.vads.ws.v5.CheckThreeDSAuthenticationResponse")
+    public com.lyra.vads.ws.v5.CheckThreeDSAuthenticationResponse.CheckThreeDSAuthenticationResult checkThreeDSAuthentication(
+        @WebParam(name = "commonRequest", targetNamespace = "")
+        CommonRequest commonRequest,
+        @WebParam(name = "threeDSRequest", targetNamespace = "")
+        ThreeDSRequest threeDSRequest);
+
+    /**
+     * 
+     * @param commonRequest
+     * @param queryRequest
+     * @param paymentRequest
+     * @return
+     *     returns com.lyra.vads.ws.v5.UpdatePaymentResponse.UpdatePaymentResult
+     */
+    @WebMethod
+    @WebResult(name = "updatePaymentResult", targetNamespace = "")
+    @RequestWrapper(localName = "updatePayment", targetNamespace = "http://v5.ws.vads.lyra.com/", className = "com.lyra.vads.ws.v5.UpdatePayment")
+    @ResponseWrapper(localName = "updatePaymentResponse", targetNamespace = "http://v5.ws.vads.lyra.com/", className = "com.lyra.vads.ws.v5.UpdatePaymentResponse")
+    public com.lyra.vads.ws.v5.UpdatePaymentResponse.UpdatePaymentResult updatePayment(
+        @WebParam(name = "commonRequest", targetNamespace = "")
+        CommonRequest commonRequest,
+        @WebParam(name = "queryRequest", targetNamespace = "")
+        QueryRequest queryRequest,
+        @WebParam(name = "paymentRequest", targetNamespace = "")
+        PaymentRequest paymentRequest);
+
+    /**
+     * 
+     * @param shoppingCartRequest
+     * @param queryRequest
+     * @return
+     *     returns com.lyra.vads.ws.v5.UpdatePaymentDetailsResponse.UpdatePaymentDetailsResult
+     */
+    @WebMethod
+    @WebResult(name = "updatePaymentDetailsResult", targetNamespace = "")
+    @RequestWrapper(localName = "updatePaymentDetails", targetNamespace = "http://v5.ws.vads.lyra.com/", className = "com.lyra.vads.ws.v5.UpdatePaymentDetails")
+    @ResponseWrapper(localName = "updatePaymentDetailsResponse", targetNamespace = "http://v5.ws.vads.lyra.com/", className = "com.lyra.vads.ws.v5.UpdatePaymentDetailsResponse")
+    public com.lyra.vads.ws.v5.UpdatePaymentDetailsResponse.UpdatePaymentDetailsResult updatePaymentDetails(
+        @WebParam(name = "queryRequest", targetNamespace = "")
+        QueryRequest queryRequest,
+        @WebParam(name = "shoppingCartRequest", targetNamespace = "")
+        ShoppingCartRequest shoppingCartRequest);
+
+    /**
+     * 
+     * @param extendedResponseRequest
+     * @param queryRequest
+     * @return
+     *     returns com.lyra.vads.ws.v5.GetPaymentDetailsResponse.GetPaymentDetailsResult
+     */
+    @WebMethod
+    @WebResult(name = "getPaymentDetailsResult", targetNamespace = "")
+    @RequestWrapper(localName = "getPaymentDetails", targetNamespace = "http://v5.ws.vads.lyra.com/", className = "com.lyra.vads.ws.v5.GetPaymentDetails")
+    @ResponseWrapper(localName = "getPaymentDetailsResponse", targetNamespace = "http://v5.ws.vads.lyra.com/", className = "com.lyra.vads.ws.v5.GetPaymentDetailsResponse")
+    public com.lyra.vads.ws.v5.GetPaymentDetailsResponse.GetPaymentDetailsResult getPaymentDetails(
+        @WebParam(name = "queryRequest", targetNamespace = "")
+        QueryRequest queryRequest,
+        @WebParam(name = "extendedResponseRequest", targetNamespace = "")
+        ExtendedResponseRequest extendedResponseRequest);
+
+    /**
+     * 
+     * @param cardRequest
+     * @param commonRequest
+     * @param queryRequest
+     * @param customerRequest
+     * @return
+     *     returns com.lyra.vads.ws.v5.UpdateTokenResponse.UpdateTokenResult
+     */
+    @WebMethod
+    @WebResult(name = "updateTokenResult", targetNamespace = "")
+    @RequestWrapper(localName = "updateToken", targetNamespace = "http://v5.ws.vads.lyra.com/", className = "com.lyra.vads.ws.v5.UpdateToken")
+    @ResponseWrapper(localName = "updateTokenResponse", targetNamespace = "http://v5.ws.vads.lyra.com/", className = "com.lyra.vads.ws.v5.UpdateTokenResponse")
+    public com.lyra.vads.ws.v5.UpdateTokenResponse.UpdateTokenResult updateToken(
+        @WebParam(name = "commonRequest", targetNamespace = "")
+        CommonRequest commonRequest,
+        @WebParam(name = "queryRequest", targetNamespace = "")
+        QueryRequest queryRequest,
+        @WebParam(name = "cardRequest", targetNamespace = "")
+        CardRequest cardRequest,
+        @WebParam(name = "customerRequest", targetNamespace = "")
+        CustomerRequest customerRequest);
+
+    /**
+     * 
+     * @param commonRequest
+     * @param queryRequest
+     * @return
+     *     returns com.lyra.vads.ws.v5.CancelSubscriptionResponse.CancelSubscriptionResult
+     */
+    @WebMethod
+    @WebResult(name = "cancelSubscriptionResult", targetNamespace = "")
+    @RequestWrapper(localName = "cancelSubscription", targetNamespace = "http://v5.ws.vads.lyra.com/", className = "com.lyra.vads.ws.v5.CancelSubscription")
+    @ResponseWrapper(localName = "cancelSubscriptionResponse", targetNamespace = "http://v5.ws.vads.lyra.com/", className = "com.lyra.vads.ws.v5.CancelSubscriptionResponse")
+    public com.lyra.vads.ws.v5.CancelSubscriptionResponse.CancelSubscriptionResult cancelSubscription(
+        @WebParam(name = "commonRequest", targetNamespace = "")
+        CommonRequest commonRequest,
+        @WebParam(name = "queryRequest", targetNamespace = "")
+        QueryRequest queryRequest);
+
+    /**
+     * 
+     * @param commonRequest
+     * @param paymentRequest
+     * @param queryRequest
+     * @return
+     *     returns com.lyra.vads.ws.v5.RefundPaymentResponse.RefundPaymentResult
+     */
+    @WebMethod
+    @WebResult(name = "refundPaymentResult", targetNamespace = "")
+    @RequestWrapper(localName = "refundPayment", targetNamespace = "http://v5.ws.vads.lyra.com/", className = "com.lyra.vads.ws.v5.RefundPayment")
+    @ResponseWrapper(localName = "refundPaymentResponse", targetNamespace = "http://v5.ws.vads.lyra.com/", className = "com.lyra.vads.ws.v5.RefundPaymentResponse")
+    public com.lyra.vads.ws.v5.RefundPaymentResponse.RefundPaymentResult refundPayment(
+        @WebParam(name = "commonRequest", targetNamespace = "")
+        CommonRequest commonRequest,
+        @WebParam(name = "paymentRequest", targetNamespace = "")
+        PaymentRequest paymentRequest,
+        @WebParam(name = "queryRequest", targetNamespace = "")
+        QueryRequest queryRequest);
+
+    /**
+     * 
+     * @param cardRequest
+     * @param commonRequest
+     * @param queryRequest
+     * @return
+     *     returns com.lyra.vads.ws.v5.CreateTokenFromTransactionResponse.CreateTokenFromTransactionResult
+     */
+    @WebMethod
+    @WebResult(name = "createTokenFromTransactionResult", targetNamespace = "")
+    @RequestWrapper(localName = "createTokenFromTransaction", targetNamespace = "http://v5.ws.vads.lyra.com/", className = "com.lyra.vads.ws.v5.CreateTokenFromTransaction")
+    @ResponseWrapper(localName = "createTokenFromTransactionResponse", targetNamespace = "http://v5.ws.vads.lyra.com/", className = "com.lyra.vads.ws.v5.CreateTokenFromTransactionResponse")
+    public com.lyra.vads.ws.v5.CreateTokenFromTransactionResponse.CreateTokenFromTransactionResult createTokenFromTransaction(
+        @WebParam(name = "commonRequest", targetNamespace = "")
+        CommonRequest commonRequest,
+        @WebParam(name = "cardRequest", targetNamespace = "")
+        CardRequest cardRequest,
         @WebParam(name = "queryRequest", targetNamespace = "")
         QueryRequest queryRequest);
 
@@ -156,40 +324,6 @@ public interface PaymentAPI {
 
     /**
      * 
-     * @param commonRequest
-     * @param queryRequest
-     * @return
-     *     returns com.lyra.vads.ws.v5.CancelPaymentResponse.CancelPaymentResult
-     */
-    @WebMethod
-    @WebResult(name = "cancelPaymentResult", targetNamespace = "")
-    @RequestWrapper(localName = "cancelPayment", targetNamespace = "http://v5.ws.vads.lyra.com/", className = "com.lyra.vads.ws.v5.CancelPayment")
-    @ResponseWrapper(localName = "cancelPaymentResponse", targetNamespace = "http://v5.ws.vads.lyra.com/", className = "com.lyra.vads.ws.v5.CancelPaymentResponse")
-    public com.lyra.vads.ws.v5.CancelPaymentResponse.CancelPaymentResult cancelPayment(
-        @WebParam(name = "commonRequest", targetNamespace = "")
-        CommonRequest commonRequest,
-        @WebParam(name = "queryRequest", targetNamespace = "")
-        QueryRequest queryRequest);
-
-    /**
-     * 
-     * @param threeDSRequest
-     * @param commonRequest
-     * @return
-     *     returns com.lyra.vads.ws.v5.CheckThreeDSAuthenticationResponse.CheckThreeDSAuthenticationResult
-     */
-    @WebMethod
-    @WebResult(name = "checkThreeDSAuthenticationResult", targetNamespace = "")
-    @RequestWrapper(localName = "checkThreeDSAuthentication", targetNamespace = "http://v5.ws.vads.lyra.com/", className = "com.lyra.vads.ws.v5.CheckThreeDSAuthentication")
-    @ResponseWrapper(localName = "checkThreeDSAuthenticationResponse", targetNamespace = "http://v5.ws.vads.lyra.com/", className = "com.lyra.vads.ws.v5.CheckThreeDSAuthenticationResponse")
-    public com.lyra.vads.ws.v5.CheckThreeDSAuthenticationResponse.CheckThreeDSAuthenticationResult checkThreeDSAuthentication(
-        @WebParam(name = "commonRequest", targetNamespace = "")
-        CommonRequest commonRequest,
-        @WebParam(name = "threeDSRequest", targetNamespace = "")
-        ThreeDSRequest threeDSRequest);
-
-    /**
-     * 
      * @param legacyTransactionKeyRequest
      * @return
      *     returns com.lyra.vads.ws.v5.GetPaymentUuidResponse.LegacyTransactionKeyResult
@@ -201,43 +335,6 @@ public interface PaymentAPI {
     public com.lyra.vads.ws.v5.GetPaymentUuidResponse.LegacyTransactionKeyResult getPaymentUuid(
         @WebParam(name = "legacyTransactionKeyRequest", targetNamespace = "")
         LegacyTransactionKeyRequest legacyTransactionKeyRequest);
-
-    /**
-     * 
-     * @param commonRequest
-     * @param queryRequest
-     * @param paymentRequest
-     * @return
-     *     returns com.lyra.vads.ws.v5.UpdatePaymentResponse.UpdatePaymentResult
-     */
-    @WebMethod
-    @WebResult(name = "updatePaymentResult", targetNamespace = "")
-    @RequestWrapper(localName = "updatePayment", targetNamespace = "http://v5.ws.vads.lyra.com/", className = "com.lyra.vads.ws.v5.UpdatePayment")
-    @ResponseWrapper(localName = "updatePaymentResponse", targetNamespace = "http://v5.ws.vads.lyra.com/", className = "com.lyra.vads.ws.v5.UpdatePaymentResponse")
-    public com.lyra.vads.ws.v5.UpdatePaymentResponse.UpdatePaymentResult updatePayment(
-        @WebParam(name = "commonRequest", targetNamespace = "")
-        CommonRequest commonRequest,
-        @WebParam(name = "queryRequest", targetNamespace = "")
-        QueryRequest queryRequest,
-        @WebParam(name = "paymentRequest", targetNamespace = "")
-        PaymentRequest paymentRequest);
-
-    /**
-     * 
-     * @param shoppingCartRequest
-     * @param queryRequest
-     * @return
-     *     returns com.lyra.vads.ws.v5.UpdatePaymentDetailsResponse.UpdatePaymentDetailsResult
-     */
-    @WebMethod
-    @WebResult(name = "updatePaymentDetailsResult", targetNamespace = "")
-    @RequestWrapper(localName = "updatePaymentDetails", targetNamespace = "http://v5.ws.vads.lyra.com/", className = "com.lyra.vads.ws.v5.UpdatePaymentDetails")
-    @ResponseWrapper(localName = "updatePaymentDetailsResponse", targetNamespace = "http://v5.ws.vads.lyra.com/", className = "com.lyra.vads.ws.v5.UpdatePaymentDetailsResponse")
-    public com.lyra.vads.ws.v5.UpdatePaymentDetailsResponse.UpdatePaymentDetailsResult updatePaymentDetails(
-        @WebParam(name = "queryRequest", targetNamespace = "")
-        QueryRequest queryRequest,
-        @WebParam(name = "shoppingCartRequest", targetNamespace = "")
-        ShoppingCartRequest shoppingCartRequest);
 
     /**
      * 
@@ -379,60 +476,6 @@ public interface PaymentAPI {
     @RequestWrapper(localName = "findPayments", targetNamespace = "http://v5.ws.vads.lyra.com/", className = "com.lyra.vads.ws.v5.FindPayments")
     @ResponseWrapper(localName = "findPaymentsResponse", targetNamespace = "http://v5.ws.vads.lyra.com/", className = "com.lyra.vads.ws.v5.FindPaymentsResponse")
     public com.lyra.vads.ws.v5.FindPaymentsResponse.FindPaymentsResult findPayments(
-        @WebParam(name = "queryRequest", targetNamespace = "")
-        QueryRequest queryRequest);
-
-    /**
-     * 
-     * @param queryRequest
-     * @return
-     *     returns com.lyra.vads.ws.v5.GetPaymentDetailsResponse.GetPaymentDetailsResult
-     */
-    @WebMethod
-    @WebResult(name = "getPaymentDetailsResult", targetNamespace = "")
-    @RequestWrapper(localName = "getPaymentDetails", targetNamespace = "http://v5.ws.vads.lyra.com/", className = "com.lyra.vads.ws.v5.GetPaymentDetails")
-    @ResponseWrapper(localName = "getPaymentDetailsResponse", targetNamespace = "http://v5.ws.vads.lyra.com/", className = "com.lyra.vads.ws.v5.GetPaymentDetailsResponse")
-    public com.lyra.vads.ws.v5.GetPaymentDetailsResponse.GetPaymentDetailsResult getPaymentDetails(
-        @WebParam(name = "queryRequest", targetNamespace = "")
-        QueryRequest queryRequest);
-
-    /**
-     * 
-     * @param cardRequest
-     * @param commonRequest
-     * @param queryRequest
-     * @param customerRequest
-     * @return
-     *     returns com.lyra.vads.ws.v5.UpdateTokenResponse.UpdateTokenResult
-     */
-    @WebMethod
-    @WebResult(name = "updateTokenResult", targetNamespace = "")
-    @RequestWrapper(localName = "updateToken", targetNamespace = "http://v5.ws.vads.lyra.com/", className = "com.lyra.vads.ws.v5.UpdateToken")
-    @ResponseWrapper(localName = "updateTokenResponse", targetNamespace = "http://v5.ws.vads.lyra.com/", className = "com.lyra.vads.ws.v5.UpdateTokenResponse")
-    public com.lyra.vads.ws.v5.UpdateTokenResponse.UpdateTokenResult updateToken(
-        @WebParam(name = "commonRequest", targetNamespace = "")
-        CommonRequest commonRequest,
-        @WebParam(name = "queryRequest", targetNamespace = "")
-        QueryRequest queryRequest,
-        @WebParam(name = "cardRequest", targetNamespace = "")
-        CardRequest cardRequest,
-        @WebParam(name = "customerRequest", targetNamespace = "")
-        CustomerRequest customerRequest);
-
-    /**
-     * 
-     * @param commonRequest
-     * @param queryRequest
-     * @return
-     *     returns com.lyra.vads.ws.v5.CancelSubscriptionResponse.CancelSubscriptionResult
-     */
-    @WebMethod
-    @WebResult(name = "cancelSubscriptionResult", targetNamespace = "")
-    @RequestWrapper(localName = "cancelSubscription", targetNamespace = "http://v5.ws.vads.lyra.com/", className = "com.lyra.vads.ws.v5.CancelSubscription")
-    @ResponseWrapper(localName = "cancelSubscriptionResponse", targetNamespace = "http://v5.ws.vads.lyra.com/", className = "com.lyra.vads.ws.v5.CancelSubscriptionResponse")
-    public com.lyra.vads.ws.v5.CancelSubscriptionResponse.CancelSubscriptionResult cancelSubscription(
-        @WebParam(name = "commonRequest", targetNamespace = "")
-        CommonRequest commonRequest,
         @WebParam(name = "queryRequest", targetNamespace = "")
         QueryRequest queryRequest);
 

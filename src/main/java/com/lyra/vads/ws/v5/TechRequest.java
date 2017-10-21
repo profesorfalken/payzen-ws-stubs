@@ -7,9 +7,9 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for techRequest complex type.
+ * <p>Classe Java pour techRequest complex type.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>Le fragment de schéma suivant indique le contenu attendu figurant dans cette classe.
  * 
  * <pre>
  * &lt;complexType name="techRequest">
@@ -18,6 +18,7 @@ import javax.xml.bind.annotation.XmlType;
  *       &lt;sequence>
  *         &lt;element name="browserUserAgent" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="browserAccept" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="integrationType" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -29,15 +30,17 @@ import javax.xml.bind.annotation.XmlType;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "techRequest", propOrder = {
     "browserUserAgent",
-    "browserAccept"
+    "browserAccept",
+    "integrationType"
 })
 public class TechRequest {
 
     protected String browserUserAgent;
     protected String browserAccept;
+    protected String integrationType;
 
     /**
-     * Gets the value of the browserUserAgent property.
+     * Obtient la valeur de la propriété browserUserAgent.
      * 
      * @return
      *     possible object is
@@ -49,7 +52,7 @@ public class TechRequest {
     }
 
     /**
-     * Sets the value of the browserUserAgent property.
+     * Définit la valeur de la propriété browserUserAgent.
      * 
      * @param value
      *     allowed object is
@@ -61,7 +64,7 @@ public class TechRequest {
     }
 
     /**
-     * Gets the value of the browserAccept property.
+     * Obtient la valeur de la propriété browserAccept.
      * 
      * @return
      *     possible object is
@@ -73,7 +76,7 @@ public class TechRequest {
     }
 
     /**
-     * Sets the value of the browserAccept property.
+     * Définit la valeur de la propriété browserAccept.
      * 
      * @param value
      *     allowed object is
@@ -82,6 +85,30 @@ public class TechRequest {
      */
     public void setBrowserAccept(String value) {
         this.browserAccept = value;
+    }
+
+    /**
+     * Obtient la valeur de la propriété integrationType.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getIntegrationType() {
+        return integrationType;
+    }
+
+    /**
+     * Définit la valeur de la propriété integrationType.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setIntegrationType(String value) {
+        this.integrationType = value;
     }
 
 }
