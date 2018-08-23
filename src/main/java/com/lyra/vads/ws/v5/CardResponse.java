@@ -22,6 +22,7 @@ import javax.xml.bind.annotation.XmlType;
  *         &lt;element name="country" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="productCode" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="bankCode" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="bankLabel" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="expiryMonth" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
  *         &lt;element name="expiryYear" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
  *       &lt;/sequence>
@@ -40,6 +41,7 @@ import javax.xml.bind.annotation.XmlType;
     "country",
     "productCode",
     "bankCode",
+    "bankLabel",
     "expiryMonth",
     "expiryYear"
 })
@@ -51,6 +53,7 @@ public class CardResponse {
     protected String country;
     protected String productCode;
     protected String bankCode;
+    protected String bankLabel;
     protected Integer expiryMonth;
     protected Integer expiryYear;
 
@@ -196,6 +199,30 @@ public class CardResponse {
      */
     public void setBankCode(String value) {
         this.bankCode = value;
+    }
+
+    /**
+     * Obtient la valeur de la propriété bankLabel.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getBankLabel() {
+        return bankLabel;
+    }
+
+    /**
+     * Définit la valeur de la propriété bankLabel.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setBankLabel(String value) {
+        this.bankLabel = value;
     }
 
     /**

@@ -18,6 +18,7 @@ import javax.xml.bind.annotation.XmlType;
  *       &lt;sequence>
  *         &lt;element name="isNsuRequested" type="{http://www.w3.org/2001/XMLSchema}boolean"/>
  *         &lt;element name="isWalletRequested" type="{http://www.w3.org/2001/XMLSchema}boolean"/>
+ *         &lt;element name="isBankLabelRequested" type="{http://www.w3.org/2001/XMLSchema}boolean"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -29,12 +30,14 @@ import javax.xml.bind.annotation.XmlType;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "extendedResponseRequest", propOrder = {
     "isNsuRequested",
-    "isWalletRequested"
+    "isWalletRequested",
+    "isBankLabelRequested"
 })
 public class ExtendedResponseRequest {
 
     protected boolean isNsuRequested;
     protected boolean isWalletRequested;
+    protected boolean isBankLabelRequested;
 
     /**
      * Obtient la valeur de la propriété isNsuRequested.
@@ -66,6 +69,22 @@ public class ExtendedResponseRequest {
      */
     public void setIsWalletRequested(boolean value) {
         this.isWalletRequested = value;
+    }
+
+    /**
+     * Obtient la valeur de la propriété isBankLabelRequested.
+     * 
+     */
+    public boolean isIsBankLabelRequested() {
+        return isBankLabelRequested;
+    }
+
+    /**
+     * Définit la valeur de la propriété isBankLabelRequested.
+     * 
+     */
+    public void setIsBankLabelRequested(boolean value) {
+        this.isBankLabelRequested = value;
     }
 
 }

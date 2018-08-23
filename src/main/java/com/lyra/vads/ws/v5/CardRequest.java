@@ -28,6 +28,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *         &lt;element name="cardHolderName" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="proofOfIdType" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="proofOfIdNumber" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="walletPayload" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -47,7 +48,8 @@ import javax.xml.datatype.XMLGregorianCalendar;
     "paymentToken",
     "cardHolderName",
     "proofOfIdType",
-    "proofOfIdNumber"
+    "proofOfIdNumber",
+    "walletPayload"
 })
 public class CardRequest {
 
@@ -62,6 +64,7 @@ public class CardRequest {
     protected String cardHolderName;
     protected String proofOfIdType;
     protected String proofOfIdNumber;
+    protected String walletPayload;
 
     /**
      * Obtient la valeur de la propriété number.
@@ -301,6 +304,30 @@ public class CardRequest {
      */
     public void setProofOfIdNumber(String value) {
         this.proofOfIdNumber = value;
+    }
+
+    /**
+     * Obtient la valeur de la propriété walletPayload.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getWalletPayload() {
+        return walletPayload;
+    }
+
+    /**
+     * Définit la valeur de la propriété walletPayload.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setWalletPayload(String value) {
+        this.walletPayload = value;
     }
 
 }
